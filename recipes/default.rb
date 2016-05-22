@@ -46,3 +46,4 @@ remote_file '/tmp/rds-combined-ca-bundle.pem' do
   group 'ubuntu'
   mode '0400'
   action :create
+end
