@@ -7,12 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# deployment of the release package and linking to /usr/local/bin
-ark 'etcd' do
-  url node[:etcd][:download_url]
-  has_binaries ['etcd', 'etcdctl']
-end
-
 
 # download cert file
 remote_file '/tmp/rds-combined-ca-bundle.pem' do
