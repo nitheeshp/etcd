@@ -47,3 +47,9 @@ remote_file '/tmp/rds-combined-ca-bundle.pem' do
   mode '0400'
   action :create
 end
+
+
+# store in etcd
+execute 'store cert in etcd' do
+  command 'curl -L -X PUT http://127.0.0.1:2379/v2/keys/foo -d value="`cat /tmp/rds-combined-ca-bundle.pem`"'
+end
