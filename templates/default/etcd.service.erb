@@ -5,7 +5,7 @@ Description=etcd
 <% @environment.each do |key, value| -%>
 Environment=<%= key %>=<%= value %>
 <% end %>
-ExecStart=/usr/local/bin/etcd-v2.3.5-linux-amd64/etcd
+ExecStart=/usr/local/bin/etcd
 
 [Install]
 WantedBy=multi-user.target

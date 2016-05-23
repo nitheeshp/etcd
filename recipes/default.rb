@@ -2,6 +2,13 @@
 # Cookbook Name:: etcd
 # Recipe:: default
 #
+# Copyright (c) 2016 The Authors, All Rights Reserved.
+
+
+#
+# Cookbook Name:: etcd
+# Recipe:: default
+#
 # Copyright 2016, YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
