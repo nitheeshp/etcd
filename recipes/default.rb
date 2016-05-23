@@ -8,13 +8,10 @@
 #
 
 
-remote_file '/usr/local/bin/etcd-v2.3.5-linux-amd64.tar.gz' do
-   source 'https://github.com/coreos/etcd/releases/download/v2.3.5/etcd-v2.3.5-linux-amd64.tar.gz'
- end
-
- execute 'extract_some_tar' do
-  command 'tar -xzvf etcd-v2.3.5-linux-amd64.tar.gz'
-  cwd '/usr/local/bin/'
+# deployment of the release package and linking to /usr/local/bin
+ark 'etcd' do
+  url node[:etcd][:download_url]
+  has_binaries ['etcd', 'etcdctl']
 end
 
 # create directory for etcd data
